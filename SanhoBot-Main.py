@@ -387,3 +387,6 @@ bot.run(__import__("os").environ['BOT_TOKEN'])
 bot.help_command = bot.get_command(
     name="help"
 )
+
+while True:
+    print("hello, world")
