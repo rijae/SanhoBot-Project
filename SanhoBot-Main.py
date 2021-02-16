@@ -4,7 +4,7 @@ import json
 import os
 
 
-class Database:
+class SanhoDB:
     @staticmethod
     def create_user_data(
         user_id: int
@@ -52,7 +52,7 @@ class Database:
     ):
         user_json_file_path = f"./Users/{user_id}.json"
 
-        Database.create_user_data(user_id)
+        SanhoDB.create_user_data(user_id)
 
         with open(
             file=user_json_file_path,
@@ -232,7 +232,7 @@ async def bag_command(
     else:
         scanned_user = user
 
-    data = Database.get_user_data(
+    data = SanhoDB.get_user_data(
         user_id=scanned_user.id
     )
     money = data["economy_info"]["money"]
@@ -383,7 +383,7 @@ if not os.path.isdir("./Users"):
         path="./Users"
     )
 
-bot.run(input("토큰을 입력하세요. : "))
+bot.run(input("토큰을 입력하세요 : "))
 bot.help_command = bot.get_command(
     name="help"
 )
