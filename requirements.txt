@@ -1,1 +1,1 @@
-discord.py==LATEST
+discord.py==3.9.0
