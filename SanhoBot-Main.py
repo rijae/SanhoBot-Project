@@ -383,7 +383,7 @@ if not os.path.isdir("./Users"):
         path="./Users"
     )
 
-bot.run(__import__("os").environ['BOT_TOKEN'])
+bot.run(__import__("os").environ['bot_token'])
 bot.help_command = bot.get_command(
     name="help"
 )
